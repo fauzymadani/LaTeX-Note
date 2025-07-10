@@ -46,7 +46,16 @@
 \title{C Programming Exercise Solution for Beginner}
 
 \begin{document}
+  \author{
+		Student Name: Fauzy Madani \\ 
+		SMKN 1 GARUT \\
+		Pengembangan Perangkat Lunak Dan Gim }
+
   \maketitle
+
+  \tableofcontents
+
+  \clearpage
 
   \begin{abstract}
   i'm currently learning C and planning to improve my \LaTeX Skill. so i came up with this idea. This is only for my learning purpose. doing C problem while writing the solution and
@@ -92,8 +101,6 @@
   
   by storing a number in \texttt{\#define}, it's not the best practice in the modern C. because as i said, \textbf{It has no data types, hard to debug, there's no scope, and etc.} 
   i'd reccomend using a \texttt{const} variable instead. for example: \texttt{const double PI = 3.1415926535;}. a \texttt{\#define} is more suitable for storing a macro rather than a number for mathematical operation unless you know what are you doing.
-
-  \vfill\null
   
   \section{Calculate average weight for purchases} 
   
@@ -145,7 +152,7 @@
   
   \textbf{\textit{Why does \texttt{scanf()} require to use \& ?}} well, It needs to change the variable. Since all arguments in C are passed by value you need to pass a pointer if you want a function to be able to change a parameter.
   Here's a super-simple example showing it:
-  
+
   \begin{lstlisting}[language=C, caption=scanf example]
     void nochange(int var) {
     // Here, var is a copy of the original number. &var != &value
@@ -166,8 +173,6 @@
   
   C function parameters are always "pass-by-value", which means that the function scanf only sees a copy of the current value of whatever you specify as the argument expression.
   In this case \&i is a pointer value that refers to the variable i. scanf can use this to modify i. If you passed i, then it would only see an uninitialized value, which (a) is UB, (b) is not sufficient information for scanf to know how to modify i.
-
-  \vfill\null
 
   \section{Print employee ID and monthly salary}
   
@@ -228,8 +233,6 @@
       return EXIT_SUCCESS;
     }
   \end{lstlisting}
-
-  \vfill\null
 
   \section{Find the maximum of three integers}
   
@@ -314,8 +317,6 @@
   \end{tikzpicture}
   \end{center}
 
-  \vfill\null
-
   \subsection{Solution}
 
   we're declaring a global scope variable first to avoid getting an error.
@@ -360,5 +361,11 @@
   }
  
   \end{lstlisting}
+
+  \begin{multicols}{2}
+    \subsection*{Some Notes}
+
+    This program does not implement a classic linear search in the strictest sense, because it isn’t looking for the index of a specific target value provided by the user. Instead, it performs a maximum value search within a fixed-size array by linearly traversing each element from the beginning to the end. During this traversal, the algorithm compares each element with the current maximum value and updates the maximum if a larger value is found. This approach still falls under the category of linear search in a broader sense, because it uses the same principle: going through the array one element at a time without skipping or using any advanced techniques like binary search. The time complexity remains O(n), where n is the number of elements in the array, which is identical to the complexity of a standard linear search. So, while the purpose differs (finding the maximum instead of locating a specific value), the method used aligns closely with linear search behavior.
+  \end{multicols}
 
 \end{document}

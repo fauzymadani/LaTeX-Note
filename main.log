@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.4.18)  10 JUL 2025 16:05
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.4.18)  10 JUL 2025 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -631,40 +631,43 @@ LaTeX Font Info:    ... okay on input line 48.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count314
-LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) (./main.toc)
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
-LaTeX Warning: No \author given.
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[1
+
+] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) [1
+) [2
 
 ]
 
 LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 146.
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 153.
 
-[2] [3] [4] [5] (./main.aux) ) 
+[3] [4] [5] [6] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 16203 strings out of 476775
- 321781 string characters out of 5808212
- 2080991 words of memory out of 5000000
- 36069 multiletter control sequences out of 15000+600000
+ 16209 strings out of 476775
+ 321837 string characters out of 5808212
+ 2090991 words of memory out of 5000000
+ 36072 multiletter control sequences out of 15000+600000
  521865 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 100i,13n,104p,453b,1548s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,13n,104p,1012b,1548s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (5 pages).
+Output written on main.pdf (6 pages).
