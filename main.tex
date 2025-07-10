@@ -5,6 +5,8 @@
 \usepackage{multicol}
 \usepackage{titlesec}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -221,6 +223,129 @@
       printf("Salary = U\$ %.2f\n", salary);
       return EXIT_SUCCESS;
     }
+  \end{lstlisting}
+
+  \section{Find the maximum of three integers}
+  
+  Write a C program that accepts three integers and finds the maximum of three. Test Data :
+  
+  \begin{lstlisting}[style=plainstyle]
+    Input the first integer: 25
+    Input the second integer: 35
+    Input the third integer: 15
+    Expected Output:
+    Maximum value of three integers: 35 
+  \end{lstlisting}
+
+  my approach for this problem is by creating three integer variable and then store it as an array. for this problem, we can use 
+  an algorithm called \textit{Linear search algorithms}. 
+
+  \subsection{Linear Search in Mathematical Form}
+
+  Given an array $A = [a_1, a_2, \dots, a_n]$ and a target value $x$, linear search looks for an index $i$ such that:
+  
+  \[
+  a_i = x, \quad \text{where } 1 \leq i \leq n
+  \]
+  
+  If found:
+  
+  \[
+  f(x, A) =
+  \begin{cases}
+  i, & \text{if } a_i = x \text{ for some } i \in \{1, \dots, n\} \\
+  -1, & \text{if } x \notin A
+  \end{cases}
+  \]
+  
+  \textbf{Number of Comparisons:}
+  \[
+  \begin{aligned}
+  C_{\text{best}}(n) &= 1 \\
+  C_{\text{worst}}(n) &= n \\
+  C_{\text{avg}}(n) &= \frac{n + 1}{2}
+  \end{aligned}
+  \]
+  
+  \textbf{Time Complexity:}
+  
+  \[
+  \begin{aligned}
+  O_{\text{best}} &= O(1) \\
+  O_{\text{worst}} &= O(n) \\
+  O_{\text{avg}} &= O(n)
+  \end{aligned}
+  \]
+
+  In Linear Search, we iterate over all the elements of the array and check if it the current element is equal to the target element. If we find any element to be equal to the target element, then return the index of the current element. Otherwise, if no element is equal to the target element, then return -1 as the element is not found. Linear search is also known as sequential search.
+  
+  \begin{center}
+\begin{tikzpicture}[arrow/.style={->, red, thick}]
+  % Title
+  \node at (4, 4.5) {\Large \textbf{Linear Search}};
+  \node at (4, 4.1) {\normalsize Find 37?};
+
+  % Draw array boxes
+  \foreach \val [count=\i from 0] in {20,35,37,40,45,50,51,55,67} {
+    \draw[thick] (\i*1,3) rectangle ++(1,1);
+    \node at (\i*1 + 0.5, 3.5) {\Large \val};
+    \node[below] at (\i*1 + 0.5, 3) {\scriptsize Index \i};
+  }
+
+  % Arrows showing comparison
+  \draw[arrow] (0.5,3) -- +(0,-0.7);
+  \node[below, red] at (0.5,2.1) {\Large $\neq$};
+
+  \draw[arrow] (1.5,3) -- +(0,-0.7);
+  \node[below, red] at (1.5,2.1) {\Large $\neq$};
+
+  \draw[arrow] (2.5,3) -- +(0,-0.7);
+  \node[below, red] at (2.5,2.1) {\Large $=$};
+
+  \node[below=1.2cm, red] at (2.1,2.0) {\Large \textbf{Return 2}};
+  \end{tikzpicture}
+  \end{center}
+
+  \subsection{Solution}
+
+  we're declaring a global scope variable first to avoid getting an error.
+
+  \begin{lstlisting}[language=C, caption=Global Scope variable]
+    int num1, num2, num3;
+  \end{lstlisting}
+
+  to implement the \textit{linear search algorithms}, we can create a function outside of \texttt{main}:
+
+  \begin{lstlisting}[language=C, caption=findMax function]
+    int findMax(int array[], int n){
+  
+      int max = array[num1];
+
+      for (int i = 1; i < n; i++) {
+        if (array[i] > max) {
+          max = array[i];
+        }
+      }
+
+      return max;
+  }
+
+  int main(){
+    printf("Enter num1: ");
+    scanf("%d", &num1);
+  
+    printf("enter num2: "); 
+    scanf("%d", &num2);
+  
+    printf("Enter num3: ");
+    scanf("%d", &num3);
+  
+    int array[] = {num1, num2, num3};
+  
+    int n = sizeof(array) / sizeof(array[0]);
+    printf("%d\n", findMax(array, n));
+    return EXIT_SUCCESS;
+  }
   \end{lstlisting}
 
 \end{document}
