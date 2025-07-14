@@ -5,6 +5,7 @@
 \contentsline {subsection}{\numberline {2.1}Solution}{3}{}%
 \contentsline {section}{\numberline {3}Print employee ID and monthly salary}{3}{}%
 \contentsline {subsection}{\numberline {3.1}Solution}{4}{}%
-\contentsline {section}{\numberline {4}Find the maximum of three integers}{4}{}%
-\contentsline {subsection}{\numberline {4.1}Linear Search in Mathematical Form}{4}{}%
-\contentsline {subsection}{\numberline {4.2}Solution}{5}{}%
+\contentsline {section}{\numberline {4}Find the maximum of three integers}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Linear Search in Mathematical Form}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Solution}{6}{}%
+\contentsline {subsection}{\numberline {4.3}Some Notes}{6}{}%

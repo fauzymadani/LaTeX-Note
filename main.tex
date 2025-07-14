@@ -4,9 +4,17 @@
 \usepackage{listings}
 \usepackage{multicol}
 \usepackage{titlesec}
+\usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{fourier-orns}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\renewcommand\headrule{%
+\hrulefill
+\raisebox{-2.1pt}
+{\quad\decofourleft\decotwo\decofourright\quad}%
+\hrulefill}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -46,6 +54,11 @@
 \title{C Programming Exercise Solution for Beginner}
 
 \begin{document}
+  \pagestyle{fancy}
+  \fancyhf{}
+  \fancyhead[LE]{\nouppercase{\rightmark\hfill\leftmark}}
+  \fancyhead[RO]{\nouppercase{\leftmark\hfill\rightmark}}
+  \fancyfoot[LE,RO]{\hfill\thepage\hfill}
   \author{
 		Student Name: Fauzy Madani \\ 
 		SMKN 1 GARUT \\
@@ -234,6 +247,8 @@
     }
   \end{lstlisting}
 
+  \clearpage
+
   \section{Find the maximum of three integers}
   
   Write a C program that accepts three integers and finds the maximum of three. Test Data :
@@ -248,6 +263,8 @@
 
   my approach for this problem is by creating three integer variable and then store it as an array. for this problem, we can use 
   an algorithm called \textit{Linear search algorithms}. 
+
+  \vfill\null
 
   \subsection{Linear Search in Mathematical Form}
   
@@ -362,9 +379,9 @@
  
   \end{lstlisting}
 
-  \begin{multicols}{2}
-    \subsection*{Some Notes}
+  \subsection{Some Notes}
 
+  \begin{multicols}{2}
     This program does not implement a classic linear search in the strictest sense, because it isn’t looking for the index of a specific target value provided by the user. Instead, it performs a maximum value search within a fixed-size array by linearly traversing each element from the beginning to the end. During this traversal, the algorithm compares each element with the current maximum value and updates the maximum if a larger value is found. This approach still falls under the category of linear search in a broader sense, because it uses the same principle: going through the array one element at a time without skipping or using any advanced techniques like binary search. The time complexity remains O(n), where n is the number of elements in the array, which is identical to the complexity of a standard linear search. So, while the purpose differs (finding the maximum instead of locating a specific value), the method used aligns closely with linear search behavior.
   \end{multicols}
 
